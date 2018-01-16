@@ -65,7 +65,7 @@ df4 <- data.table::fintersect(setDT(df1), setDT(df2))
 
 str(df4)
 
-# Let´s see how data.table deals with more complex nested data
+# LetÂ´s see how data.table deals with more complex nested data
 
 df1 <- data.frame(V1 = LETTERS[1:4], V2 = 1:4, V3=2:5, V4=c("dog"))
 df2 <- data.frame(V1 = LETTERS[2:3], V2 = 2:3)
@@ -76,7 +76,7 @@ df5 <- data.table::fintersect(setDT(df1), setDT(df2))
 
 # Oh.. they must have same column classes..
 
-df2 <- data.frame(V1 = LETTERS[2:3], V2 = 2:3, V3= c(0), V4=c("don´t know"))
+df2 <- data.frame(V1 = LETTERS[2:3], V2 = 2:3, V3= c(0), V4=c("donÂ´t know"))
 df1
 df5 <- data.table::fintersect(setDT(df1), setDT(df2))
 
@@ -104,7 +104,7 @@ df2 <- data.frame(CustomerId=c(2L,4L,6L,7L),State=c(rep('Alabama',2L),'Ohio','Te
 df1
 df2
 
-#Let´s understand the indexing
+#LetÂ´s understand the indexing
 names(df2)[-1L]
 names(df1)[-1L]
 
@@ -148,8 +148,8 @@ df1
 
 # Now we get the customer from Texas 
 
-df1 <- data.frame(CustomerId=1:6,Product=c(rep('Toaster',3L),rep('Radio',3L)));
-df2 <- data.frame(CustomerId=c(2L,4L,6L,7L),State=c(rep('Alabama',2L),'Ohio','Texas'));
+df1 <- data.frame(CustomerId=1:6, Product=c(rep('Toaster',3L),rep('Radio',3L)));
+df2 <- data.frame(CustomerId=c(2L,4L,6L,7L), State=c(rep('Alabama',2L),'Ohio','Texas'));
 
 # It gets that you only have 1 column in common :)
 dplyr::full_join(df1, df2)
